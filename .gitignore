@@ -10,6 +10,7 @@ node_modules/
 
 # Documentation (keep locally, don't commit)
 docs/
+README.md
 
 # Scripts not needed for website
 scripts/

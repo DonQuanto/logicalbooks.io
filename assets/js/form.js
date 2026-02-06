@@ -88,13 +88,13 @@ window.attachContactFormHandler = function attachContactFormHandler() {
     const headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
     if (cfg.AUTH_HEADER && cfg.AUTH_VALUE) headers[cfg.AUTH_HEADER] = cfg.AUTH_VALUE;
     const payload = {
-      form: 'contact',
+      formType: 'contact',
       name, email, phone, service, message,
       source: location.href,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString()
     };
-    fetch(`${endpoint}/contact`, {
+    fetch(endpoint, {
       method: 'POST',
       headers,
       body: JSON.stringify(payload)

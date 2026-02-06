@@ -7,13 +7,11 @@
 // to your serverless endpoint (e.g., Cloudflare Worker URL).
 window.APP_CONFIG = Object.assign(window.APP_CONFIG || {}, {
   FORMS: {
-    // Switch to custom provider (Cloudflare Worker)
+    // Use Google Apps Script endpoint
     provider: 'custom',
-    // Worker base URL (no trailing slash beyond /forms)
-    FORM_ENDPOINT: 'https://logical-books-forms.biollogics.workers.dev/forms',
-    // Optional bearer token header. If you set AUTH_TOKEN as a secret in the Worker,
-    // uncomment the next two lines and paste the token value.
-    AUTH_HEADER: '', // e.g., 'Authorization'
-    AUTH_VALUE: ''   // e.g., 'Bearer <token>'
+    // Google Apps Script Web App URL
+    FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbx2Fsh99stzLJkQOzRYQEJFeRKsW-IXnKpd2yxuIohWrkKZNjznbE99Z7prLx1Jw0Plhw/exec',
+    AUTH_HEADER: '',
+    AUTH_VALUE: ''
   }
 });

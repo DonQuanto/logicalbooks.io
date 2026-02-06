@@ -2,9 +2,14 @@
 .DS_Store
 
 # Local tokens / secrets
-zoho_access-token.txt
 .env
 
 # Node
 node_modules/
 
+
+# Documentation (keep locally, don't commit)
+docs/
+
+# Scripts not needed for website
+scripts/

@@ -109,16 +109,16 @@ window.attachIntakeFormHandler = function attachIntakeFormHandler() {
     const headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
     if (cfg.AUTH_HEADER && cfg.AUTH_VALUE) headers[cfg.AUTH_HEADER] = cfg.AUTH_VALUE;
     const payload = {
-      form: 'intake',
+      formType: 'intake',
       name, email, phone, company, website, industry, stage, team,
-      services,
+      services: services.join(', '),
       software, transactions, challenges, goals, budget, timeline, referrer,
       consent: !!consent,
       source: location.href,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString()
     };
-    fetch(`${endpoint}/intake`, {
+    fetch(endpoint, {
       method: 'POST',
       headers,
       body: JSON.stringify(payload)

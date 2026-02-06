@@ -2,6 +2,12 @@
   publish = "."
   command = ""
 
+[[redirects]]
+  from = "/api/forms"
+  to = "https://script.google.com/macros/s/AKfycbx2Fsh99stzLJkQOzRYQEJFeRKsW-IXnKpd2yxuIohWrkKZNjznbE99Z7prLx1Jw0Plhw/exec"
+  status = 200
+  force = true
+
 # Optional: basic security and caching headers
 [[headers]]
   for = "/assets/img/*"
